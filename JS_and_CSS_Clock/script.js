@@ -15,11 +15,12 @@ function setDate() {
         hours-=12
     }
 
-    console.log(seconds)
+    
+    let degOfMinInhour=minutes/5
 
     secondHand.style.transform = `rotate(${seconds*6}deg)`;
     minuteHand.style.transform = `rotate(${minutes*6}deg)`;
-    hourHand.style.transform = `rotate(${hours*30}deg)`;
+    hourHand.style.transform = `rotate(${(hours*30)+degOfMinInhour*2}deg)`;
 }
 
 setInterval(setDate, 1000);
