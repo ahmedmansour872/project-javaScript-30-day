@@ -1,0 +1,119 @@
+body {
+  background: url(images/galaxy.gif);
+  text-align: center;
+  padding: 20px 20px 0;
+  color: #e3e1e9;
+}
+
+h1 {
+  font-size: 50px;
+}
+
+input,
+select,
+button {
+  padding: 10px;
+  outline: none;
+  width: 200px;
+  margin-top: 10px;
+  font-weight: bold;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+select option {
+  color: #000;
+  background-color: #6a6a6a;
+  text-transform: uppercase;
+  font-weight: bold;
+  margin: 5px;
+}
+
+button {
+  background-color: rgba(106, 106, 106, 0.7);
+  width: 200px;
+  cursor: pointer;
+  border: 1px solid #6a6a6a;
+  color: #e3e1e9;
+}
+
+.view {
+  margin: 50px 50px 0;
+  text-align: center;
+  background-color: rgba(56, 56, 56, 0.5);
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+}
+
+.view .photo {
+  margin-right: 20px;
+}
+
+.view .photo img {
+  width: 90%;
+}
+
+.view .massage {
+  display: none;
+  width: 400px;
+  padding: 0 20px;
+  margin: 20px auto;
+  background-color: rgba(80, 80, 80, 0.5);
+  color: #e3e1e9;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  font-size: 20px;
+}
+
+@media (max-width: 1001px) {
+  .view {
+    display: block;
+  }
+
+  .view .photo img {
+    width: 50%;
+  }
+
+  .view .massage {
+    padding: 20px;
+    width: auto;
+  }
+}
+
+@media (max-width: 667px) {
+  .view .photo img {
+    width: 200px;
+  }
+}
+
+.view .massage .mass span {
+  text-transform: uppercase;
+  color: #fff;
+  display: inline-block;
+  margin-top: 10px;
+}
+
+.view .massage .calc {
+  width: 100px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  background-color: rgba(90, 90, 90, 0.7);
+  margin: auto;
+  color: #fff;
+  margin-bottom: 20px;
+  font-weight: bold;
+  overflow: hidden;
+  word-break: break-all;
+}
