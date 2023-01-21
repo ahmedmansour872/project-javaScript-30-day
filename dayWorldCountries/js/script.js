@@ -1,11 +1,11 @@
-import { countries_data as database } from "./data/countries_data.js";
+import { countries_data as database } from "../data/countries_data.js";
 
 let main = document.getElementById("stat");
 
 let population = document.querySelector(".population");
 let languages = document.querySelector(".languages");
 let graphTitle = document.querySelector(".graph-title");
-let footer = document.querySelector("footer");
+let showData = document.querySelector(".show-data");
 
 let pagenation = document.createElement("ul");
 let graphs = document.createElement("div");
@@ -18,7 +18,7 @@ let startSlice = 0;
 let listItems = [];
 let showItems = 5;
 let removeAndAddItemsFromGreatherThan = 0;
-let dataForView = [];
+let dataForView;
 
 function createElementsinDOM(arr) {
   graphs.remove();
@@ -118,7 +118,7 @@ function createPagenationList(arr) {
   pagenation.remove();
   pagenation = document.createElement("ul");
   pagenation.className = "pagenation";
-  footer.appendChild(pagenation);
+  showData.appendChild(pagenation);
 
   for (let i = 0; i < lengthOfArr; i++) {
     let list = document.createElement("li");
@@ -175,7 +175,47 @@ function displayLanguageAndNumberSpeaker(all_language) {
     return b.languageNumber - a.languageNumber;
   });
   dataForView = [...numberOfLanguageCount];
+
   return createPagenationList(numberOfLanguageCount);
+}
+
+function showAndHideArrow() {
+  if (listItems[listItems.length - 1].classList.contains("show"))
+    greaterThan.style.display = "none";
+  else greaterThan.style.display = "inline-block";
+
+  if (listItems[0].classList.contains("show"))
+    lesserThan.style.display = "none";
+  else lesserThan.style.display = "inline-block";
+
+  let activeItem = document.querySelector(".pagenation .active");
+  startSlice = activeItem.textContent;
+}
+
+function removeAndAddItemsArrowRight(removeAndAddItem) {
+  listItems[removeAndAddItem].classList.remove("show");
+  listItems[removeAndAddItem].classList.add("hide");
+
+  listItems[removeAndAddItem + showItems].classList.remove("hide");
+  listItems[removeAndAddItem + showItems].classList.add("show");
+
+  removeAndAddItemsFromGreatherThan++;
+}
+
+function removeAndAddItemsArrowLft(removeAndAddItem) {
+  listItems[removeAndAddItem - 1].classList.remove("hide");
+  listItems[removeAndAddItem - 1].classList.add("show");
+
+  listItems[removeAndAddItem + showItems - 1].classList.remove("show");
+  listItems[removeAndAddItem + showItems - 1].classList.add("hide");
+
+  removeAndAddItemsFromGreatherThan--;
+}
+
+function removeClassActive(arrayOfData) {
+  arrayOfData.forEach((e) => {
+    if (e.classList.contains("active")) e.classList.remove("active");
+  });
 }
 
 languages.addEventListener("click", () => {
@@ -224,42 +264,3 @@ lesserThan.addEventListener("click", () => {
     dataForView.slice((startSlice - 1) * 10, startSlice * 10 + 1)
   );
 });
-
-function showAndHideArrow() {
-  if (listItems[listItems.length - 1].classList.contains("show"))
-    greaterThan.style.display = "none";
-  else greaterThan.style.display = "inline-block";
-
-  if (listItems[0].classList.contains("show"))
-    lesserThan.style.display = "none";
-  else lesserThan.style.display = "inline-block";
-
-  let activeItem = document.querySelector(".pagenation .active");
-  startSlice = activeItem.textContent;
-}
-
-function removeAndAddItemsArrowRight(removeAndAddItem) {
-  listItems[removeAndAddItem].classList.remove("show");
-  listItems[removeAndAddItem].classList.add("hide");
-
-  listItems[removeAndAddItem + showItems].classList.remove("hide");
-  listItems[removeAndAddItem + showItems].classList.add("show");
-
-  removeAndAddItemsFromGreatherThan++;
-}
-
-function removeAndAddItemsArrowLft(removeAndAddItem) {
-  listItems[removeAndAddItem - 1].classList.remove("hide");
-  listItems[removeAndAddItem - 1].classList.add("show");
-
-  listItems[removeAndAddItem + showItems - 1].classList.remove("show");
-  listItems[removeAndAddItem + showItems - 1].classList.add("hide");
-
-  removeAndAddItemsFromGreatherThan--;
-}
-
-function removeClassActive(arrayOfData) {
-  arrayOfData.forEach((e) => {
-    if (e.classList.contains("active")) e.classList.remove("active");
-  });
-}

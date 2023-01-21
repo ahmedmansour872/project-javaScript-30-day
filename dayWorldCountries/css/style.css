@@ -1,3 +1,6 @@
+:root {
+  --main-color: #009879;
+}
 * {
   box-sizing: border-box;
   padding: 0;
@@ -12,7 +15,7 @@ body {
 
 header h1 {
   font-family: "Courier New", Courier, monospace;
-  color: #f2a93b;
+  color: var(--main-color);
   font-size: 50px;
 }
 
@@ -31,7 +34,7 @@ main .center {
 main .center .graph-buttons button {
   padding: 10px 30px;
   font-size: 20px;
-  background-color: #f2a93b;
+  background-color: var(--main-color);
   border: #aaa;
   border-radius: 3px;
   -webkit-border-radius: 3px;
@@ -51,8 +54,8 @@ main .center .graph-buttons button {
 
 main .center .graph-buttons button:hover {
   background-color: #fff;
-  color: #f2a93b;
-  border: 1px solid #f2a93b;
+  color: var(--main-color);
+  border: 1px solid var(--main-color);
 }
 
 main .center .graph-buttons button:first-of-type {
@@ -80,6 +83,7 @@ main .center .graph-title {
 
 .graphs .graph .counteryNameOrLang {
   width: 20%;
+  cursor: pointer;
 }
 
 .graphs .graph .graphView {
@@ -133,7 +137,7 @@ main .center .graph-title {
 
 .graphs .graph .graphView span {
   display: inline-flex;
-  background-color: #f2a93b;
+  background-color: var(--main-color);
   height: 35px;
   width: 0;
   transition: all ease-in-out 1s;
@@ -141,7 +145,7 @@ main .center .graph-title {
   -moz-transition: all ease-in-out 1s;
   -ms-transition: all ease-in-out 1s;
   -o-transition: all ease-in-out 1s;
-  color: #000;
+  color: #fff;
   justify-content: center;
   align-items: center;
 }
@@ -154,7 +158,7 @@ main .center .graph-title {
 .pagenation li {
   color: #fff;
   display: inline-block;
-  background-color: #f2a93b;
+  background-color: var(--main-color);
   padding: 5px;
   margin-right: 5px;
   font-size: 20px;
@@ -164,7 +168,7 @@ main .center .graph-title {
   -moz-border-radius: 4px;
   -ms-border-radius: 4px;
   -o-border-radius: 4px;
-  border: 1px solid #f2a93b;
+  border: 1px solid var(--main-color);
   font-weight: bold;
   transition: all ease-in-out 0.5s;
   -webkit-transition: all ease-in-out 0.5s;
@@ -184,9 +188,9 @@ main .center .graph-title {
 
 .pagenation li:hover,
 .pagenation li.active {
-  color: #f2a93b;
+  color: var(--main-color);
   background-color: #fff;
-  border: 1px solid #f2a93b;
+  border: 1px solid var(--main-color);
   transform: translateY(-10px);
   -webkit-transform: translateY(-10px);
   -moz-transform: translateY(-10px);
@@ -197,7 +201,7 @@ main .center .graph-title {
 .pagenation span {
   display: inline-block;
   margin: 0 15px;
-  background-color: #f2a93b;
+  background-color: var(--main-color);
   color: #fff;
   font-size: 20px;
   padding: 5px 10px;
@@ -207,4 +211,19 @@ main .center .graph-title {
   -moz-border-radius: 3px;
   -ms-border-radius: 3px;
   -o-border-radius: 3px;
+}
+
+footer {
+  margin-top: 20px;
+}
+
+footer h3 {
+  margin-top: 10px;
+}
+
+footer h3 a {
+  text-decoration: none;
+  color: var(--main-color);
+  margin-right: 30px;
+  padding: 0 20px;
 }
