@@ -23,38 +23,11 @@ numberOfLanguageCount.sort((a, b) => {
 });
 
 numberOfLanguageCount.forEach((e) => {
-  //   createTable(e);
-  let titleTable = document.createElement("h3");
   let table = document.createElement("table");
   let thead = document.createElement("thead");
-  let trHaed = document.createElement("tr");
-  let idHaed = document.createElement("th");
-  let nameHaed = document.createElement("th");
-  let capitalHaed = document.createElement("th");
-  let regionHaed = document.createElement("th");
-  let languagesHaed = document.createElement("th");
-  let populationHaed = document.createElement("th");
-  let areaHaed = document.createElement("th");
   let tbody = document.createElement("tbody");
+  createTable(e);
 
-  titleTable.textContent = `Language ${e.languageName} with all countries speak it.`;
-  idHaed.textContent = "#";
-  nameHaed.textContent = "name";
-  capitalHaed.textContent = "capital";
-  regionHaed.textContent = "region";
-  languagesHaed.textContent = "languages";
-  populationHaed.textContent = "population";
-  areaHaed.textContent = "area";
-
-  container.appendChild(titleTable);
-  trHaed.appendChild(idHaed);
-  trHaed.appendChild(nameHaed);
-  trHaed.appendChild(capitalHaed);
-  trHaed.appendChild(regionHaed);
-  trHaed.appendChild(languagesHaed);
-  trHaed.appendChild(populationHaed);
-  trHaed.appendChild(areaHaed);
-  thead.appendChild(trHaed);
   table.appendChild(thead);
   table.appendChild(tbody);
 
@@ -96,4 +69,36 @@ function bindData(j, item, tbody) {
   tr.appendChild(population);
   tr.appendChild(area);
   tbody.appendChild(tr);
+}
+
+function createTable(e) {
+  let titleTable = document.createElement("h3");
+  let thead = document.createElement("thead");
+  let trHaed = document.createElement("tr");
+  let idHaed = document.createElement("th");
+  let nameHaed = document.createElement("th");
+  let capitalHaed = document.createElement("th");
+  let regionHaed = document.createElement("th");
+  let languagesHaed = document.createElement("th");
+  let populationHaed = document.createElement("th");
+  let areaHaed = document.createElement("th");
+
+  titleTable.textContent = `Language ${e.languageName} with all countries speak it.`;
+  idHaed.textContent = "#";
+  nameHaed.textContent = "name";
+  capitalHaed.textContent = "capital";
+  regionHaed.textContent = "region";
+  languagesHaed.textContent = "languages";
+  populationHaed.textContent = "population";
+  areaHaed.textContent = "area";
+
+  container.appendChild(titleTable);
+  trHaed.appendChild(idHaed);
+  trHaed.appendChild(nameHaed);
+  trHaed.appendChild(capitalHaed);
+  trHaed.appendChild(regionHaed);
+  trHaed.appendChild(languagesHaed);
+  trHaed.appendChild(populationHaed);
+  trHaed.appendChild(areaHaed);
+  thead.appendChild(trHaed);
 }
