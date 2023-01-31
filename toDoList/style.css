@@ -1,0 +1,91 @@
+body {
+  text-align: center;
+}
+body .container {
+  width: 80%;
+  margin: auto;
+}
+body .container .add-player {
+  margin: 20px auto;
+}
+body .container .add-player input, body .container .add-player button {
+  padding: 10px;
+  border: 1px solid #e5c9c5;
+  outline: none;
+  font-size: 16px;
+  margin-top: 5px;
+}
+body .container .add-player input::-moz-placeholder, body .container .add-player button::-moz-placeholder {
+  color: #aaa;
+}
+body .container .add-player input:-ms-input-placeholder, body .container .add-player button:-ms-input-placeholder {
+  color: #aaa;
+}
+body .container .add-player input::placeholder, body .container .add-player button::placeholder {
+  color: #aaa;
+}
+body .container .add-player input:focus, body .container .add-player button:focus {
+  border: 1px solid #ef7a68;
+}
+body .container .add-player button {
+  width: 150px;
+  padding: 10px;
+  cursor: pointer;
+  background-color: #ef7a68;
+  color: #fff;
+  transition: all ease-in-out 0.5s;
+  -webkit-transition: all ease-in-out 0.5s;
+  -moz-transition: all ease-in-out 0.5s;
+  -ms-transition: all ease-in-out 0.5s;
+  -o-transition: all ease-in-out 0.5s;
+}
+body .container .add-player button:focus {
+  border: none;
+}
+body .container .add-player button:hover {
+  background-color: #555;
+  color: #ef7a68;
+}
+body .container .error {
+  color: #ef7a68;
+}
+body .container .main {
+  margin-top: 10px;
+}
+body .container .main .cart {
+  background-color: #e5c9c5;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color: #555;
+  padding: 5px 10px;
+  margin-top: 10px;
+}
+body .container .main .cart h4 {
+  padding: 0;
+  margin: 0;
+  margin-bottom: 10px;
+}
+body .container .main .cart .setting span {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  cursor: pointer;
+  transition: all ease-in-out 0.5s;
+  -webkit-transition: all ease-in-out 0.5s;
+  -moz-transition: all ease-in-out 0.5s;
+  -ms-transition: all ease-in-out 0.5s;
+  -o-transition: all ease-in-out 0.5s;
+}
+body .container .main .cart .setting span:hover {
+  background-color: #ef7a68;
+  color: #FFF;
+}/*# sourceMappingURL=style.css.map */
