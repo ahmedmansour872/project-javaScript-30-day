@@ -1,0 +1,312 @@
+:root {
+  --main-color: #009879;
+  --second-color: #f9f9f9;
+}
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  text-align: center;
+  background-color: #eee;
+  padding: 30px 0;
+}
+
+header h1 {
+  font-family: "Courier New", Courier, monospace;
+  color: var(--main-color);
+  font-size: 50px;
+}
+
+header p {
+  font-size: 20px;
+  margin-top: 8px;
+}
+
+header p:last-of-type span {
+  color: var(--main-color);
+}
+
+.search-sort {
+  margin: 20px 0 10px;
+  padding: 20px;
+  background-color: var(--second-color);
+  box-shadow: 0 2px 2px rgb(208, 208, 208), 0 -2px 2px rgb(208, 208, 208);
+}
+
+.search-sort .search {
+  width: 50%;
+  margin: 10px auto;
+}
+
+.search-sort .search input {
+  width: 100%;
+  outline: none;
+  border: 1px solid var(--main-color);
+  padding: 8px;
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+  color: var(--main-color);
+  background-color: transparent;
+  font-size: 18px;
+}
+
+.search-sort .sort {
+  margin-top: 15px;
+}
+
+.search-sort .sort button {
+  padding: 5px 10px;
+  background-color: var(--main-color);
+  cursor: pointer;
+  border: 1px solid var(--second-color);
+  width: 150px;
+  margin-top: 10px;
+  color: var(--second-color);
+  font-size: 18px;
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+  transition: all ease-in-out 0.8s;
+  -webkit-transition: all ease-in-out 0.8s;
+  -moz-transition: all ease-in-out 0.8s;
+  -ms-transition: all ease-in-out 0.8s;
+  -o-transition: all ease-in-out 0.8s;
+}
+
+.search-sort .sort button:hover {
+  background-color: var(--second-color);
+  border: 1px solid var(--main-color);
+  color: var(--main-color);
+}
+
+.search-sort .sort-name {
+  color: #555;
+  font-size: 18px;
+  margin-top: 15px;
+}
+
+.search-sort .sort-name span {
+  color: var(--main-color);
+}
+
+.show-counties {
+  margin: 10px 0;
+  display: flex;
+  justify-content: space-around;
+  padding: 0 20px;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.show-counties .cart {
+  padding: 10px;
+  background-color: var(--second-color);
+  width: calc(100% / 8);
+  margin-top: 20px;
+}
+
+@media (max-width: 1200px) {
+  .show-counties .cart {
+    width: calc(100% / 7);
+  }
+}
+
+@media (max-width: 991px) {
+  .show-counties .cart {
+    width: calc(100% / 5);
+  }
+}
+
+@media (max-width: 767px) {
+  .show-counties .cart {
+    width: calc(100% / 4);
+  }
+}
+
+@media (max-width: 576px) {
+  .show-counties .cart {
+    width: calc(100% / 3);
+  }
+}
+
+.show-counties .cart picture {
+  display: inline-block;
+  overflow: hidden;
+  padding: 0 15px;
+}
+
+.show-counties .cart picture img {
+  width: 100%;
+  height: 100px;
+}
+
+.show-counties .cart h3 {
+  color: var(--main-color);
+  margin: 10px 0;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.show-counties .cart > div {
+  color: #aaa;
+}
+
+.show-counties .cart span {
+  color: var(--main-color);
+}
+
+main .center {
+  margin: 20px 0 10px;
+  padding: 20px;
+  background-color: var(--second-color);
+  box-shadow: 0 2px 2px rgb(208, 208, 208), 0 -2px 2px rgb(208, 208, 208);
+}
+
+main .center .graph-buttons button {
+  padding: 10px 30px;
+  font-size: 20px;
+  background-color: var(--main-color);
+  border: #aaa;
+  border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  cursor: pointer;
+  transition: all ease-in-out 0.5s;
+  -webkit-transition: all ease-in-out 0.5s;
+  -moz-transition: all ease-in-out 0.5s;
+  -ms-transition: all ease-in-out 0.5s;
+  -o-transition: all ease-in-out 0.5s;
+  border: 1px solid #eee;
+  color: #fff;
+  margin-top: 20px;
+}
+
+main .center .graph-buttons button:hover {
+  background-color: #fff;
+  color: var(--main-color);
+  border: 1px solid var(--main-color);
+}
+
+main .center .graph-buttons button:first-of-type {
+  margin-right: 20px;
+}
+
+main .center .graph-title {
+  margin-top: 10px;
+  text-transform: capitalize;
+  font-size: 20px;
+}
+
+.graphs {
+  margin-top: 20px;
+  text-align: left;
+  padding: 0 20px;
+}
+
+.graphs .graph {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 5px;
+}
+
+.graphs .graph .counteryNameOrLang {
+  width: 20%;
+  cursor: pointer;
+}
+
+.graphs .graph .graphView {
+  width: 70%;
+  text-align: left;
+  padding: 0 20px;
+}
+
+.graphs .graph .counterynumber {
+  width: 10%;
+}
+
+@media (max-width: 991px) {
+  .graphs .graph .graphView {
+    width: 65%;
+    padding: 0;
+  }
+
+  .graphs .graph .counterynumber {
+    width: 15%;
+  }
+}
+
+@media (max-width: 991px) {
+  .graphs .graph .graphView {
+    padding: 0 20px;
+  }
+}
+
+@media (max-width: 576px) {
+  .graphs .graph .graphView {
+    width: 55%;
+  }
+
+  .graphs .graph .counterynumber {
+    width: 20%;
+  }
+
+  .graphs .graph .counteryNameOrLang {
+    width: 25%;
+  }
+
+  main .center .graph-buttons button:last-of-type {
+    margin-right: 20px;
+  }
+
+  header h1 {
+    font-size: 36px;
+  }
+}
+
+.graphs .graph .graphView span {
+  display: inline-flex;
+  background-color: var(--main-color);
+  height: 35px;
+  width: 0;
+  transition: all ease-in-out 1s;
+  -webkit-transition: all ease-in-out 1s;
+  -moz-transition: all ease-in-out 1s;
+  -ms-transition: all ease-in-out 1s;
+  -o-transition: all ease-in-out 1s;
+  color: #fff;
+  justify-content: center;
+  align-items: center;
+}
+
+.scroll{
+  position: fixed;
+  bottom: 30px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  background-color: var(--main-color);
+  color: var(--second-color);
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  display: none;
+}

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>World Countries Data</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>World Countries Data</h1>
+      <p>Currently, We have 250 countries</p>
+      <p>
+        <span id="numberOfCountries">21</span> Countries Satisfied The Search
+        criteria
+      </p>
+    </header>
+
+    <div class="search-sort">
+      <div class="search">
+        <input type="search" id="search" placeholder="Search" />
+      </div>
+      <div class="sort">
+        <button id="CountryName">Name</button>
+        <button id="CountryCapital">Capital</button>
+        <button id="CountryPopulation">Population</button>
+      </div>
+
+      <div class="sort-name">
+        Sort By <span id="sortBY">Name</span>
+        <span id="typeOfSort">Increased</span>
+      </div>
+    </div>
+
+    <div class="show-counties"></div>
+
+    <main id="stat">
+      <div class="center">
+        <div class="graph-buttons">
+          <button class="population">Population</button>
+        </div>
+        <p class="graph-title"></p>
+      </div>
+    </main>
+    <div class="show-data"></div>
+
+    <div class="scroll">
+      <p>Up</p>
+    </div>
+    <script src="data/countries_data.js" type="module"></script>
+    <script src="js/script.js" type="module"></script>
+  </body>
+</html>
