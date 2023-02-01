@@ -76,6 +76,11 @@ function addPlayerInCart() {
     date: date,
   });
 
+  firstName.value = "";
+  lastName.value = "";
+  country.value = "";
+  playScore.value = "";
+
   sortPlayerByScore();
 }
 
